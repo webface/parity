@@ -1,0 +1,40 @@
+.panel{
+	color:black;
+	display:flex;
+	justify-content:space-between;
+	padding:10px;
+	background-color: rgba(255, 255, 255, .35);
+	border-radius:10px;
+	-moz-box-shadow:    inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px grey;
+	box-shadow:         inset 0 0 10px grey;
+	height:80px;
+}
+.mode{
+	width:50px;
+	height:50px;
+	text-align: center;
+	cursor:pointer;
+	.fa-3x{
+		display:block;
+		color:grey;
+		opacity: .5;
+		cursor:pointer;
+		margin:auto;
+	}
+	&.active,&:hover{
+		.fa-3x{
+			color:black;
+			opacity: 1;
+			padding-bottom:7px;
+		}
+		p{
+			font-weight: 400;
+		}
+	}
+}
+.card-header{
+	display:flex;
+	justify-content:space-between;
+}
+

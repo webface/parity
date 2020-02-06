@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Navbar , Image , Nav} from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import logo from './logo.png';
+import './style.scss';
+import { Controls } from './components/controls';
+import { Display } from './components/display';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <style type="text/css">
+        {`
+          .html,body{max-width:100vw;max-height:100vh;overflow-x:hidden;}
+          .logo{max-width:30px;}
+          a{color:black}
+        `}
+      </style>
+      <Navbar>
+        <Navbar.Brand href="#home"><Image className="logo" src={logo} alt="logo"/> Parity</Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+          <Nav.Link href="mailto:tommyadeniyi@gmail.com">Prepared By: Tommy Adeniyi</Nav.Link>
+          <Nav.Link href="#home"><FontAwesomeIcon icon={faGithub} size='2x' /></Nav.Link>
+        </Navbar.Collapse>
+      </Navbar>
+      <Controls/>
+      <Display/>
+    </>
   );
 }
 
