@@ -18,7 +18,7 @@ export const Display = (props)=>{
 		
 	}
 	const liveData = [[],[],[]];
-	const dataPoints = data.point_data.map((item,index) =>(
+	const dataPoints = data.point_data.map((item) =>(
 		item.graph_data.map((point)=>({
 			x:new Date(point.x).valueOf(),
 			y:point.actual
@@ -62,7 +62,7 @@ export const Display = (props)=>{
 	}
 
 	let chart = useRef();
-	
+
 	const updateChart=()=> {
 		dataPoints.forEach((range,index) => {
 			liveData[index].push({

@@ -23,7 +23,7 @@ function App() {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Nav.Link href="mailto:tommyadeniyi@gmail.com">Prepared By: Tommy Adeniyi</Nav.Link>
-          <Nav.Link href="#home"><FontAwesomeIcon icon={faGithub} size='2x' /></Nav.Link>
+          <Nav.Link href="https://github.com/webface/parity" target="_blank"><FontAwesomeIcon icon={faGithub} size='2x' /></Nav.Link>
         </Navbar.Collapse>
       </Navbar>
       <Controls/>
