@@ -1,4 +1,4 @@
-This project was bootstrapped with CRA [DEMO](https://www.webfacemedia.com/parity).
+[DEMO](https://www.webfacemedia.com/parity).
 
 ## Available Scripts
 
