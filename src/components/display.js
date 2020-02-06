@@ -71,13 +71,14 @@ export const Display = (props)=>{
 			});
 			
 		});
-		updateCount();
+		
 		liveData.forEach(dps=>{
 			if (dps.length >  6 ) {
 				dps.shift();
 			}
-		})
-
+		});
+		
+		updateCount();
 		chart.render();
 	}
 
