@@ -3,7 +3,7 @@ import {Container, Row, Col, Card} from 'react-bootstrap';
 import data from '../data/thermostat.json';
 import './display.scss';
 import CanvasJSReact from '../assets/canvasjs.react';
-const CanvasJS = CanvasJSReact.CanvasJS;
+
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 export const Display = (props)=>{
@@ -73,7 +73,7 @@ export const Display = (props)=>{
 		});
 		updateCount();
 		liveData.forEach(dps=>{
-			if (dps.length >  5 ) {
+			if (dps.length >  6 ) {
 				dps.shift();
 			}
 		})
@@ -83,6 +83,7 @@ export const Display = (props)=>{
 
 	useEffect(() => {
 		setInterval(updateChart, updateInterval);
+		// eslint-disable-next-line
 	},[])
 
 	return (
