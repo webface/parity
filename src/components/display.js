@@ -28,7 +28,7 @@ export const Display = (props)=>{
 	const graphData = data.point_data.map((item,index) =>({
 		type: "line",
 		xValueType: "dateTime",
-		xValueFormatString: "D/M:hh:mm:ss TT",
+		xValueFormatString: "DDD HH:mm:ss TT",
 		showInLegend: true,
 		name: item.name,
 		dataPoints:liveData[index]
@@ -47,7 +47,10 @@ export const Display = (props)=>{
 		},
 		axisX: {
 			title: "Time of day",
-			interval: 1
+			interval:1, 
+			intervalType: "hour",        
+			valueFormatString: "hh mm TT", 
+			labelAngle: 0
 		},
 		toolTip: {
 			shared: true
@@ -93,7 +96,7 @@ export const Display = (props)=>{
 			<Container style={{marginTop:"10px"}}>
 				<Row>
 					<Col>
-						<Card bg="secondary" text="dark" style={{maxWidth:"500px",margin:'auto'}}>
+						<Card bg="secondary" text="dark" style={{maxWidth:"600px",margin:'auto'}}>
 							<Card.Body>
 								<div className="panel-display">
 									<CanvasJSChart options = {options} 
