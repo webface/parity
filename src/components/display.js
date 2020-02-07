@@ -77,13 +77,14 @@ export const Display = (props)=>{
 				dps.shift();
 			}
 		});
-		
+
 		updateCount();
 		chart.render();
 	}
 
 	useEffect(() => {
-		setInterval(updateChart, updateInterval);
+		let id = setInterval(updateChart, updateInterval);
+		return () => clearInterval(id);
 		// eslint-disable-next-line
 	},[])
 
